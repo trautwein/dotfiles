@@ -38,7 +38,7 @@ function clone_oh_my_zsh {
   if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
     # Clone oh-my-zsh repository from GitHub only if it isn't already present
     if [ ! -d ~/.oh-my-zsh/ ]; then
-      git clone http://github.com/neowork/oh-my-zsh.git ~/.oh-my-zsh
+      git clone git@github.com:robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
     fi
 
     # Set the default shell to zsh if it isn't currently set to zsh
