@@ -44,6 +44,7 @@ function clone_oh_my_zsh {
     # Set the default shell to zsh if it isn't currently set to zsh
     if [ ! $(echo $SHELL) == $(which zsh) ]; then
       chsh -s $(which zsh)
+      echo "Info: Please run source ~/.zshrc"
     fi
   else
     # If the platform is OS X, tell the user to install zsh
@@ -52,4 +53,14 @@ function clone_oh_my_zsh {
   fi
 }
 
+function clone_vundle {
+  # Clone vundle repository from GitHub only if it isn't already present
+  if [ ! -d ~/.vim/bundle/vundle/ ]; then
+    mkdir -p ~/.vim/bundle/vundle
+    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+    echo "Info: Please run :BundleInstall in vim afterwards"
+  fi
+}
+
 clone_oh_my_zsh
+clone_vundle
