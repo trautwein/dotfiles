@@ -35,11 +35,15 @@ export LANG=en_US.UTF-8
 export CC=/usr/local/bin/gcc-4.2
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 export PATH="/usr/local/heroku/bin:$PATH"
+# PRIVATE ENV VARS
+if [ -f ~/.zshrc.env ]; then
+  source ~/.zshrc.env
+fi
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew bundler osx rails3 rbenv)
+plugins=(git brew osx rbenv)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
@@ -47,7 +51,3 @@ unsetopt correct_all
 # Customize to your needs...
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# ENV
-if [ -f ~/.zshrc.env ]; then
-  source ~/.zshrc.env
-fi
