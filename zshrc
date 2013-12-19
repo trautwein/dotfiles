@@ -32,7 +32,6 @@ ZSH_THEME="miloshadzic"
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
-export CC=/usr/local/bin/gcc-4.2
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 export PATH="/usr/local/heroku/bin:$PATH"
 # PRIVATE ENV VARS
