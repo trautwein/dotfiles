@@ -143,6 +143,11 @@ let g:syntastic_check_on_open=1
 " Use OS X clipboard
 set clipboard+=unnamed
 
+"key to insert mode with paste using F2 key
+map <F2> :set paste<CR>i
+" Leave paste mode on exit
+au InsertLeave * set nopaste
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
