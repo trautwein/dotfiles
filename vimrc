@@ -12,6 +12,7 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
+set rnu           " Relative Line Numbers
 set guifont=Menlo\ Regular:h13
 set shell=/bin/bash
 
@@ -103,6 +104,10 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 " Index ctags from any project, including those outside Rails
 map <Leader>ct :!ctags -R .<CR>
 
+" Explorer Mode
+let g:netrw_liststyle=3
+map <Leader>e :Explore<CR>
+
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
 
@@ -132,6 +137,9 @@ nnoremap <C-l> <C-w>l
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
+
+" Use OS X clipboard
+set clipboard+=unnamed
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")

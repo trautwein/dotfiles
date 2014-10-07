@@ -7,9 +7,10 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="miloshadzic"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Aliases
+if [ -f ~/.zshrc.aliases ]; then
+  source ~/.zshrc.aliases
+fi
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -51,3 +52,6 @@ unsetopt correct_all
 # Customize to your needs...
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
