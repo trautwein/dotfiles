@@ -71,6 +71,8 @@ if executable('ag')
 
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
+  
+  let g:agprg="ag --column"
 endif
 
 " Color scheme
@@ -145,3 +147,4 @@ set clipboard+=unnamed
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+Bundle 'rking/ag.vim'
