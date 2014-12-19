@@ -76,7 +76,11 @@ if executable('ag')
 endif
 
 " Color scheme
-colorscheme wombat256mod
+set background=dark
+if !has("gui_running")
+  let g:gruvbox_italic=0
+endif
+colorscheme gruvbox
 
 " Numbers
 set number
