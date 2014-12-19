@@ -82,6 +82,9 @@ colorscheme wombat256mod
 set number
 set numberwidth=5
 
+" Ignore case when searching
+set ic
+
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
 
