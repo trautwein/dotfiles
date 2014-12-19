@@ -85,6 +85,9 @@ set numberwidth=5
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
 
+" set ruby path (using rbenv)
+let g:ruby_path = system('echo $HOME/.rbenv/shims')
+
 " Tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning
