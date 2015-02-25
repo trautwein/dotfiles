@@ -51,6 +51,9 @@ augroup vimrcEx
 
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
+  " Disable sound effects in MacVim
+  autocmd! GUIEnter * set vb t_vb=
 augroup END
 
 " Softtabs, 2 spaces
