@@ -21,5 +21,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'tpope/vim-rbenv'
+Bundle 'IndexedSearch'
+Bundle 'rizzatti/dash.vim'
 
 filetype on
