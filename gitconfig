@@ -10,3 +10,5 @@
 	smudge = git-media-smudge %f
 [mergetool]
 	keepBackup = true
+[pull]
+	rebase = true
