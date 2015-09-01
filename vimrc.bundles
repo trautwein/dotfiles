@@ -24,5 +24,6 @@ Bundle 'tpope/vim-rbenv'
 Bundle 'IndexedSearch'
 Bundle 'rizzatti/dash.vim'
 Bundle 'slim-template/vim-slim.git'
+Bundle 'rking/ag.vim'
 
 filetype on

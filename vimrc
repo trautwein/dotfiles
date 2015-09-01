@@ -137,6 +137,9 @@ nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
 nnoremap <Leader>s :call RunNearestSpec()<CR>
 nnoremap <Leader>l :call RunLastSpec()<CR>
 
+" execute current ruby file
+map <Leader>r :!ruby %<CR>
+
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
@@ -165,4 +168,3 @@ au InsertLeave * set nopaste
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
-Bundle 'rking/ag.vim'
