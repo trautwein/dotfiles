@@ -35,6 +35,8 @@ export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 export PATH="/usr/local/heroku/bin:$PATH"
+export ZSH_TMUX_AUTOSTART=true
+
 # PRIVATE ENV VARS
 if [ -f ~/.zshrc.env ]; then
   source ~/.zshrc.env
@@ -43,7 +45,7 @@ fi
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew osx rbenv)
+plugins=(git brew osx rbenv tmux)
 
 source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
