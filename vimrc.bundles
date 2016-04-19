@@ -23,7 +23,8 @@ Bundle 'vim-scripts/tComment'
 Bundle 'tpope/vim-rbenv'
 Bundle 'IndexedSearch'
 Bundle 'rizzatti/dash.vim'
-Bundle 'slim-template/vim-slim.git'
+Bundle 'slim-template/vim-slim'
 Bundle 'rking/ag.vim'
+Bundle 'tpope/vim-sleuth'
 
 filetype on
