@@ -26,5 +26,6 @@ Bundle 'rizzatti/dash.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-sleuth'
+Bundle 'textobj-rubyblock'
 
 filetype on
