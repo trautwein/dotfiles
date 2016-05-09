@@ -62,5 +62,10 @@ function clone_vundle {
   fi
 }
 
+function touch_files {
+  touch ~/.zshrc.aliases ~/.zshrc.env
+}
+
 clone_oh_my_zsh
 clone_vundle
+touch_files
