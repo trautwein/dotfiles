@@ -17,4 +17,4 @@
 	smudge = git-lfs smudge %f
 	required = true
 [core]
-	editor = mvim
+	editor = mvim -f
