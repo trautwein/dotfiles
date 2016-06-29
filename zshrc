@@ -55,4 +55,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 unalias run-help &>/dev/null
 autoload run-help
+autoload zmv
 HELPDIR=/usr/local/share/zsh/help
