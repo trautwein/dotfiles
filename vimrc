@@ -15,6 +15,7 @@ set autowrite     " Automatically :write before running commands
 set rnu           " Relative Line Numbers
 set guifont=Menlo\ Regular:h13
 set shell=/bin/bash
+set printoptions=portrait:n,number:y 
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
