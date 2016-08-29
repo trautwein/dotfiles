@@ -9,6 +9,7 @@ Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
 Bundle 'morhetz/gruvbox'
+Bundle 'vim-airline/vim-airline'
 Bundle 'danro/rename.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'

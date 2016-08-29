@@ -13,7 +13,7 @@ set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set rnu           " Relative Line Numbers
-set guifont=Menlo\ Regular:h13
+set guifont=Input\ Mono:h12
 set shell=/bin/bash
 set printoptions=portrait:n,number:y 
 
@@ -145,6 +145,9 @@ map <Leader>r :!ruby %<CR>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
+
+" Automatically populate the g:airline_symbols dictionary with the powerline symbols
+let g:airline_powerline_fonts = 1
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
