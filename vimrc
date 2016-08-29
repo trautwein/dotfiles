@@ -14,7 +14,6 @@ set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set rnu           " Relative Line Numbers
 set guifont=Input\ Mono:h12
-set macligatures
 set shell=/bin/bash
 set printoptions=portrait:n,number:y 
 
@@ -22,6 +21,11 @@ set printoptions=portrait:n,number:y
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
+endif
+
+" asd
+if has("gui_running")
+  set macligatures
 endif
 
 runtime macros/matchit.vim
