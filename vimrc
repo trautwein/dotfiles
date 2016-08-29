@@ -14,6 +14,7 @@ set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set rnu           " Relative Line Numbers
 set guifont=Input\ Mono:h12
+set macligatures
 set shell=/bin/bash
 set printoptions=portrait:n,number:y 
 
