@@ -14,7 +14,7 @@ set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
 set rnu           " Relative Line Numbers
 set guifont=Input\ Mono:h12
-set shell=/bin/bash
+set shell=/bin/zsh
 set printoptions=portrait:n,number:y 
 
 " Switch syntax highlighting on, when the terminal has colors
@@ -141,9 +141,12 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " vim-rspec mappings
-nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>s :call RunNearestSpec()<CR>
-nnoremap <Leader>l :call RunLastSpec()<CR>
+let g:rspec_runner = "os_x_iterm2"
+let g:rspec_command = "spring rspec {spec}"
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 " execute current ruby file
 map <Leader>r :!ruby %<CR>

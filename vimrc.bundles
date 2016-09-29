@@ -31,5 +31,6 @@ Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-sleuth'
 Bundle 'textobj-user'
 Bundle 'textobj-rubyblock'
+Bundle 'thoughtbot/vim-rspec'
 
 filetype on
