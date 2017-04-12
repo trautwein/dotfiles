@@ -1,6 +1,7 @@
 [user]
 	name = Torsten Trautwein
 	email = trautwein@neowork.com
+	signingkey = DBC688F05DB0DC29
 [push]
 	default = simple
 [alias]
@@ -18,3 +19,7 @@
 	required = true
 [core]
 	editor = mvim -f
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
