@@ -53,6 +53,15 @@ function clone_oh_my_zsh {
   fi
 }
 
+function install_powerline_fonts {
+  rm -rf /tmp/fonts
+  git clone https://github.com/powerline/fonts.git /tmp
+  cd /tmp/fonts
+  ./install.sh
+  cd ..
+  rm -rf /tmp/fonts
+}
+
 function clone_vundle {
   # Clone vundle repository from GitHub only if it isn't already present
   if [ ! -d ~/.vim/bundle/vundle/ ]; then
@@ -69,3 +78,4 @@ function touch_files {
 clone_oh_my_zsh
 clone_vundle
 touch_files
+install_powerline_fonts
