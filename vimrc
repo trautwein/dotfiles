@@ -16,6 +16,7 @@ set rnu           " Relative Line Numbers
 set guifont=Input\ Mono:h12
 set shell=/bin/zsh
 set printoptions=portrait:n,number:y 
+set diffopt+=vertical
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -23,7 +24,6 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
-" asd
 if has("gui_running")
   set macligatures
 endif
