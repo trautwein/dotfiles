@@ -55,7 +55,7 @@ function clone_oh_my_zsh {
 
 function install_powerline_fonts {
   rm -rf /tmp/fonts
-  git clone https://github.com/powerline/fonts.git /tmp
+  git clone https://github.com/powerline/fonts.git /tmp/fonts
   cd /tmp/fonts
   ./install.sh
   cd ..
