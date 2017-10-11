@@ -4,6 +4,7 @@
 	signingkey = DBC688F05DB0DC29
 [push]
 	default = simple
+  followTags = true
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [filter "media"]
