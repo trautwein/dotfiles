@@ -33,5 +33,6 @@ Bundle 'textobj-user'
 Bundle 'textobj-rubyblock'
 Bundle 'janko-m/vim-test'
 Bundle 'groovy.vim'
+Bundle 'brooth/far.vim'
 
 filetype on
