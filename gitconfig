@@ -19,7 +19,7 @@
 	smudge = git-lfs smudge %f
 	required = true
 [core]
-	editor = mvim -f
+	editor = vim -f
 [commit]
 	gpgsign = true
 [gpg]
