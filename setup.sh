@@ -75,7 +75,12 @@ function touch_files {
   touch ~/.zshrc.aliases ~/.zshrc.env
 }
 
+function install_gems {
+  gem install tmuxinator
+}
+
 clone_oh_my_zsh
 clone_vundle
 touch_files
 install_powerline_fonts
+install_gems
