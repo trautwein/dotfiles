@@ -53,6 +53,16 @@ function clone_oh_my_zsh {
   fi
 }
 
+function clone_tmux_plugin_manager {
+  if [ ! -d ~/.tmux/plugins/tpm ]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  else
+    cd ~/.tmux/plugins/tpm
+    git pull
+    cd ~
+  fi
+}
+
 function install_powerline_fonts {
   rm -rf /tmp/fonts
   git clone https://github.com/powerline/fonts.git /tmp/fonts
