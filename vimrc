@@ -12,7 +12,6 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
-set rnu           " Relative Line Numbers
 set guifont=Input\ Mono:h12
 set shell=/bin/zsh
 set printoptions=portrait:n,number:y 
