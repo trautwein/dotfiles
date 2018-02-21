@@ -17,6 +17,8 @@ set guifont=Input\ Mono:h12
 set shell=/bin/zsh
 set printoptions=portrait:n,number:y 
 set diffopt+=vertical
+set ttyfast
+set lazyredraw
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
