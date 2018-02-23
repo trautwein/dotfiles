@@ -35,5 +35,6 @@ Bundle 'janko-m/vim-test'
 Bundle 'groovy.vim'
 Bundle 'brooth/far.vim'
 Bundle 'gorkunov/smartgf.vim'
+Bundle 'vim-scripts/AnsiEsc.vim'
 
 filetype on
