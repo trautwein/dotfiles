@@ -35,6 +35,7 @@ export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 export PATH="/usr/local/heroku/bin:$PATH"
+export ZSH_TMUX_AUTOSTART=true
 export EDITOR=vim
 
 # Private ENV vars
