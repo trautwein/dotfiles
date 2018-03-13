@@ -80,6 +80,12 @@ brew services start redis
 
 printf "${success}"
 
+printf "Installing essential ${color_code}App Store${color_normal} packages...\n"
+
+mas install 441258766 # Magnet
+
+printf "${success}"
+
 printf "Installing essential ${color_code}homebrew cask${color_normal} packages...\n"
 
 brew tap caskroom/cask
