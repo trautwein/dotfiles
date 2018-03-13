@@ -74,7 +74,9 @@ brew install librsvg
 brew install weechat
 brew install imagemagick
 brew install postgresql
+brew services restart postgresql
 brew install redis
+brew services start redis
 
 printf "${success}"
 
@@ -98,6 +100,14 @@ eval "$(rbenv init -)"
 LATEST_RUBY_VERSION=$(rbenv install -l | grep -v - | tail -1)
 rbenv install $LATEST_RUBY_VERSION
 rbenv global $LATEST_RUBY_VERSION
+
+printf "${success}"
+
+
+########## Setup pip3
+printf "Seting up ${color_code}pip3${color_normal}...\n"
+
+pip3 install --upgrade pip setuptools wheel
 
 printf "${success}"
 
