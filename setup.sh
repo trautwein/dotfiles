@@ -114,9 +114,7 @@ printf "${success}"
 ########## Setup zsh
 printf "Change the default shell to ${color_code}zsh${color_normal}...\n"
 
-if [ ! $(echo $SHELL) == $(which zsh) ]; then
-  chsh -s $(which zsh)
-fi
+chsh -s /bin/zsh
 
 printf "${success}"
 
