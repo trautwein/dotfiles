@@ -72,6 +72,9 @@ brew install vim --with-override-system-vi
 brew install optipng
 brew install librsvg
 brew install weechat
+brew install imagemagick
+brew install postgresql
+brew install redis
 
 printf "${success}"
 
