@@ -73,6 +73,8 @@ brew install optipng
 brew install librsvg
 brew install weechat
 brew install imagemagick
+brew install htop
+brew install iftop
 brew install postgresql
 brew services restart postgresql
 brew install redis
