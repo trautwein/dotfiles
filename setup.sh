@@ -81,6 +81,7 @@ printf "${success}"
 printf "Installing essential ${color_code}homebrew cask${color_normal} packages...\n"
 
 brew tap caskroom/cask
+brew cask install iterm2
 brew cask install google-chrome
 brew cask install dropbox
 brew cask install docker
