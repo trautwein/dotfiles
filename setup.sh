@@ -2,23 +2,23 @@
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # backup directory
-setupfile=setup.sh                # the filename of this script
+DIR=~/dotfiles                    # dotfiles directory
+OLDDIR=~/dotfiles_old             # backup directory
+SETUPFILE=setup.sh                # the filename of this script
 
-color_normal=$(tput sgr0)
-color_code=$(tput setaf 4)
-color_success=$(tput setaf 2)
+COLOR_NORMAL=$(tput sgr0)
+COLOR_CODE=$(tput setaf 4)
+COLOR_SUCCESS=$(tput setaf 2)
 
-success="${color_success}┌───────────────────────┐\n│         Done!         │\n└───────────────────────┘${color_normal}\n\n"
+SUCCESS="${COLOR_SUCCESS}┌───────────────────────┐\n│         Done!         │\n└───────────────────────┘${COLOR_NORMAL}\n\n"
 
 ########## Dotfiles backup and symlinking
-printf "${color_normal}Backing up any existing dotfiles to ${color_code}${olddir}${color_normal} and linking the ones from ${color_code}${dir}${color_normal}...\n"
+printf "${COLOR_NORMAL}Backing up any existing dotfiles to ${COLOR_CODE}${OLDDIR}${COLOR_NORMAL} and linking the ones from ${COLOR_CODE}${DIR}${COLOR_NORMAL}...\n"
 
-mkdir -p $olddir
-cd $dir
+mkdir -p $OLDDIR
+cd $DIR
 
-for file in $dir/*; do
+for file in $DIR/*; do
   filename=$(basename "$file")
   if [ "$filename" != "$setupfile" ]; then
     printf "${filename}\n"
@@ -31,24 +31,24 @@ done
 
 touch ~/.zshrc.aliases ~/.zshrc.env
 
-printf "${success}"
+printf "${SUCCESS}"
 
 ########## Install and setup homebrew and packages
-printf "Installing ${color_code}homebrew${color_normal} if it's not present...\n"
+printf "Installing ${COLOR_CODE}homebrew${COLOR_NORMAL} if it's not present...\n"
 
 if [ ! -f /usr/local/bin/brew ]; then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-printf "${success}"
+printf "${SUCCESS}"
 
-printf "Setting up ${color_code}homebrew${color_normal}...\n"
+printf "Setting up ${COLOR_CODE}homebrew${COLOR_NORMAL}...\n"
 
 brew update && brew doctor && brew upgrade
 
-printf "${success}"
+printf "${SUCCESS}"
 
-printf "Installing essential ${color_code}homebrew${color_normal} packages...\n"
+printf "Installing essential ${COLOR_CODE}homebrew${COLOR_NORMAL} packages...\n"
 
 brew install zsh
 brew install tmux
@@ -80,15 +80,15 @@ brew services restart postgresql
 brew install redis
 brew services start redis
 
-printf "${success}"
+printf "${SUCCESS}"
 
-printf "Installing essential ${color_code}App Store${color_normal} packages...\n"
+printf "Installing essential ${COLOR_CODE}App Store${COLOR_NORMAL} packages...\n"
 
 mas install 441258766 # Magnet
 
-printf "${success}"
+printf "${SUCCESS}"
 
-printf "Installing essential ${color_code}homebrew cask${color_normal} packages...\n"
+printf "Installing essential ${COLOR_CODE}homebrew cask${COLOR_NORMAL} packages...\n"
 
 brew tap caskroom/cask
 brew cask install iterm2
@@ -99,35 +99,37 @@ brew cask install gpg-suite
 
 brew cleanup
 
-printf "${success}"
+printf "${SUCCESS}"
 
 ########## Build and setup ruby
-printf "Building the latest ${color_code}ruby${color_normal} and setting it as default...\n"
+printf "Building the latest ${COLOR_CODE}ruby${COLOR_NORMAL} and setting it as default...\n"
 
 eval "$(rbenv init -)"
 LATEST_RUBY_VERSION=$(rbenv install -l | grep -v - | tail -1)
 rbenv install $LATEST_RUBY_VERSION
 rbenv global $LATEST_RUBY_VERSION
 
-printf "${success}"
+printf "${SUCCESS}"
 
 
 ########## Setup pip3
-printf "Seting up ${color_code}pip3${color_normal}...\n"
+printf "Seting up ${COLOR_CODE}pip3${COLOR_NORMAL}...\n"
 
 pip3 install --upgrade pip setuptools wheel
 
-printf "${success}"
+printf "${SUCCESS}"
 
 ########## Setup zsh
-printf "Change the default shell to ${color_code}zsh${color_normal}...\n"
+printf "Change the default shell to ${COLOR_CODE}zsh${COLOR_NORMAL}...\n"
 
-chsh -s /bin/zsh
+if [ ! $(echo $SHELL) == /bin/zsh ]; then
+  chsh -s /bin/zsh
+fi
 
-printf "${success}"
+printf "${SUCCESS}"
 
 ########## Setup oh-my-zsh
-printf "Seting up ${color_code}oh-my-zsh${color_normal}...\n"
+printf "Seting up ${COLOR_CODE}oh-my-zsh${COLOR_NORMAL}...\n"
 
 if [ ! -d ~/.oh-my-zsh/ ]; then
   git clone git@github.com:robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
@@ -137,10 +139,26 @@ else
   cd
 fi
 
-printf "${success}"
+printf "${SUCCESS}"
+
+########## Setup zsh iTerm Touchbar
+printf "Setting up ${COLOR_CODE}zsh iTerm Touchbar${COLOR_NORMAL}...\n"
+
+
+ZSH_ITERM_TOUCHBAR_PATH=~/.oh-my-zsh/custom/plugins/zsh-iterm-touchbar
+
+if [ ! -d "${ZSH_ITERM_TOUCHBAR_PATH}" ]; then
+  git clone https://github.com/iam4x/zsh-iterm-touchbar.git ${ZSH_ITERM_TOUCHBAR_PATH}
+else
+  cd ${ZSH_ITERM_TOUCHBAR_PATH}
+  git pull
+  cd
+fi
+
+printf "${SUCCESS}"
 
 ########## Setup tpm
-printf "Seting up ${color_code}tmux plugin manager${color_normal}...\n"
+printf "Seting up ${COLOR_CODE}tmux plugin manager${COLOR_NORMAL}...\n"
 
 if [ ! -d ~/.tmux/plugins/tpm ]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -150,10 +168,10 @@ else
   cd
 fi
 
-printf "${success}"
+printf "${SUCCESS}"
 
 ########## Setup vundle
-printf "Seting up ${color_code}vundle${color_normal}...\n"
+printf "Seting up ${COLOR_CODE}vundle${COLOR_NORMAL}...\n"
 
 if [ ! -d ~/.vim/bundle/vundle ]; then
   mkdir -p ~/.vim/bundle/vundle
@@ -165,17 +183,17 @@ else
   cd
 fi
 
-printf "${success}"
+printf "${SUCCESS}"
 
 ########## Setup gems
-printf "Installing essential ${color_code}rubygems${color_normal}...\n"
+printf "Installing essential ${COLOR_CODE}rubygems${COLOR_NORMAL}...\n"
 
 gem install tmuxinator
 
-printf "${success}"
+printf "${SUCCESS}"
 
 ########## Install powerline fonts
-printf "Installing ${color_code}powerline${color_normal} fonts...\n"
+printf "Installing ${COLOR_CODE}powerline${COLOR_NORMAL} fonts...\n"
 
 rm -rf /tmp/fonts
 git clone https://github.com/powerline/fonts.git /tmp/fonts
@@ -184,10 +202,10 @@ cd /tmp/fonts
 cd
 rm -rf /tmp/fonts
 
-printf "${success}"
+printf "${SUCCESS}"
 
 ########## Set macOS preferences
-printf "Setting some sensible ${color_code}macOS${color_normal} preferences...\n"
+printf "Setting some sensible ${COLOR_CODE}macOS${COLOR_NORMAL} preferences...\n"
 
 defaults write -g InitialKeyRepeat -int 20
 defaults write -g KeyRepeat -int 1
@@ -207,7 +225,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 killall Finder
 
-printf "${success}"
+printf "${SUCCESS}"
 
 ########## The End
-printf "${color_success}That's it!${color_normal}\n"
+printf "${COLOR_SUCCESS}That's it!${COLOR_NORMAL}\n"
