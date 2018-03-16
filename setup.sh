@@ -44,7 +44,9 @@ printf "${SUCCESS}"
 
 printf "Setting up ${COLOR_CODE}homebrew${COLOR_NORMAL}...\n"
 
-brew update && brew doctor && brew upgrade
+brew update
+brew doctor
+brew upgrade
 
 printf "${SUCCESS}"
 
