@@ -1,0 +1,12 @@
+# run this after changes: antibody bundle < ~/.zsh.plugins > ~/.zsh_plugins.sh
+
+zsh-users/zsh-completions
+djui/alias-tips
+caarlos0/zsh-mkc
+agnoster/agnoster-zsh-theme
+
+robbyrussell/oh-my-zsh folder:plugins/brew
+robbyrussell/oh-my-zsh folder:plugins/git
+robbyrussell/oh-my-zsh folder:plugins/rbenv
+robbyrussell/oh-my-zsh folder:plugins/tmux
+

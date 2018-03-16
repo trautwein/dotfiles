@@ -1,11 +1,8 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+autoload -U compinit && compinit
+autoload zmv
+unalias run-help &>/dev/null
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
 
 # Aliases
 if [ -f ~/.zshrc.aliases ]; then
@@ -35,7 +32,6 @@ export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 export PATH="/usr/local/heroku/bin:$PATH"
-export ZSH_TMUX_AUTOSTART=true
 export EDITOR=vim
 
 # Private ENV vars
@@ -43,12 +39,6 @@ if [ -f ~/.zshrc.env ]; then
   source ~/.zshrc.env
 fi
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew osx rbenv tmux zsh-iterm-touchbar)
-
-source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 # Customize to your needs...
@@ -59,7 +49,7 @@ if [ -f ~/.tmuxinator.zsh ]; then
   source ~/.tmuxinator.zsh
 fi
 
-unalias run-help &>/dev/null
-autoload run-help
-autoload zmv
-HELPDIR=/usr/local/share/zsh/help
+# Antibody
+source ~/.zsh_plugins.sh
+autoload -U promptinit; promptinit
+setopt noprompt{bang,cr,percent,subst} "prompt${^prompt_opts[@]}"

@@ -55,6 +55,7 @@ brew install tmux
 brew install reattach-to-user-namespace
 brew install git
 brew install tig
+brew install archey
 brew install coreutils
 brew install rbenv
 brew install ruby-build
@@ -79,6 +80,9 @@ brew install postgresql
 brew services restart postgresql
 brew install redis
 brew services start redis
+
+brew tap getantibody/homebrew-antibody
+brew install antibody
 
 printf "${SUCCESS}"
 
@@ -122,38 +126,17 @@ printf "${SUCCESS}"
 ########## Setup zsh
 printf "Change the default shell to ${COLOR_CODE}zsh${COLOR_NORMAL}...\n"
 
-if [ ! $(echo $SHELL) == /bin/zsh ]; then
-  chsh -s /bin/zsh
+if [ ! $(echo $SHELL) == `which zsh` ]; then
+  chsh -s `which zsh`
 fi
 
 printf "${SUCCESS}"
 
-########## Setup oh-my-zsh
-printf "Seting up ${COLOR_CODE}oh-my-zsh${COLOR_NORMAL}...\n"
+########## Setup Antibody
+printf "Seting up ${COLOR_CODE}Antibody${COLOR_NORMAL}...\n"
 
-if [ ! -d ~/.oh-my-zsh/ ]; then
-  git clone git@github.com:robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-else
-  cd ~/.oh-my-zsh
-  git pull
-  cd
-fi
-
-printf "${SUCCESS}"
-
-########## Setup zsh iTerm Touchbar
-printf "Setting up ${COLOR_CODE}zsh iTerm Touchbar${COLOR_NORMAL}...\n"
-
-
-ZSH_ITERM_TOUCHBAR_PATH=~/.oh-my-zsh/custom/plugins/zsh-iterm-touchbar
-
-if [ ! -d "${ZSH_ITERM_TOUCHBAR_PATH}" ]; then
-  git clone https://github.com/iam4x/zsh-iterm-touchbar.git ${ZSH_ITERM_TOUCHBAR_PATH}
-else
-  cd ${ZSH_ITERM_TOUCHBAR_PATH}
-  git pull
-  cd
-fi
+antibody update
+antibody bundle < ~/.zsh.plugins > ~/.zsh_plugins.sh
 
 printf "${SUCCESS}"
 
