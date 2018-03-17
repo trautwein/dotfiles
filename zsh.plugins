@@ -3,7 +3,7 @@
 zsh-users/zsh-completions
 djui/alias-tips
 caarlos0/zsh-mkc
-agnoster/agnoster-zsh-theme
+denysdovhan/spaceship-prompt
 
 robbyrussell/oh-my-zsh folder:plugins/brew
 robbyrussell/oh-my-zsh folder:plugins/git
