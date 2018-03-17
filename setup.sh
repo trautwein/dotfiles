@@ -102,6 +102,7 @@ brew cask install google-chrome
 brew cask install dropbox
 brew cask install docker
 brew cask install gpg-suite
+brew cask install dash
 
 brew cleanup
 
