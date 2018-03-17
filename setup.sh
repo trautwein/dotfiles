@@ -5,6 +5,7 @@
 DIR=~/dotfiles                    # dotfiles directory
 OLDDIR=~/dotfiles_old             # backup directory
 SETUPFILE=setup.sh                # the filename of this script
+READMEFILE=README.md              # readme file
 
 COLOR_NORMAL=$(tput sgr0)
 COLOR_CODE=$(tput setaf 4)
@@ -15,18 +16,27 @@ SUCCESS="${COLOR_SUCCESS}┌─────────────────�
 ########## Dotfiles backup and symlinking
 printf "${COLOR_NORMAL}Backing up any existing dotfiles to ${COLOR_CODE}${OLDDIR}${COLOR_NORMAL} and linking the ones from ${COLOR_CODE}${DIR}${COLOR_NORMAL}...\n"
 
-mkdir -p $OLDDIR
 cd $DIR
 
-for file in $DIR/*; do
-  filename=$(basename "$file")
-  if [ "$filename" != "$setupfile" ]; then
-    printf "${filename}\n"
-    cp ~/.$filename ~/dotfiles_old/$filename
-    rm ~/.$filename
+mkdir -p $OLDDIR/config
+for FILE in $DIR/config/*; do
+  FILENAME=$(basename "${FILE}")
+  printf "${FILENAME}\n"
+  cp ~/.${FILENAME} ${OLDDIR}/${FILENAME} &>/dev/null
+  rm ~/.${FILENAME} &>/dev/null
 
-    ln -s $file ~/.$filename
-  fi
+  ln -s ${FILE} ~/.${FILENAME}
+done
+
+mkdir -p $OLDDIR/tmuxinator
+mkdir -p ~/.config/tmuxinator
+for FILE in $DIR/tmuxinator/*; do
+  FILENAME=$(basename "${FILE}")
+  printf ".config/tmuxinator/${FILENAME}\n"
+  cp ~/.config/tmuxinator/${FILENAME} ${OLDDIR}/tmuxinator/${FILENAME} &>/dev/null
+  rm ~/.config/tmuxinator/${FILENAME} &>/dev/null
+
+  ln -s ${FILE} ~/.config/tmuxinator/${FILENAME}
 done
 
 touch ~/.zshrc.aliases ~/.zshrc.env
