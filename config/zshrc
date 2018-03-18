@@ -56,7 +56,6 @@ setopt noprompt{bang,cr,percent,subst} "prompt${^prompt_opts[@]}"
 
 # Spaceship prompt options
 SPACESHIP_PROMPT_SEPARATE_LINE=false
-SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_EXEC_TIME_SHOW=false
 
 mux start shell
