@@ -3,7 +3,8 @@
 zsh-users/zsh-completions
 djui/alias-tips
 caarlos0/zsh-mkc
-denysdovhan/spaceship-prompt
+mafredri/zsh-async
+sindresorhus/pure
 
 robbyrussell/oh-my-zsh folder:plugins/brew
 robbyrussell/oh-my-zsh folder:plugins/git

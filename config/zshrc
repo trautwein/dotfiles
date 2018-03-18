@@ -54,8 +54,4 @@ source ~/.zsh_plugins.sh
 autoload -U promptinit; promptinit
 setopt noprompt{bang,cr,percent,subst} "prompt${^prompt_opts[@]}"
 
-# Spaceship prompt options
-SPACESHIP_PROMPT_SEPARATE_LINE=false
-SPACESHIP_EXEC_TIME_SHOW=false
-
 mux start shell
