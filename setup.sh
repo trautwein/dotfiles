@@ -66,6 +66,7 @@ brew install zsh
 brew install tmux
 brew install reattach-to-user-namespace
 brew install git
+brew install gitup
 brew install tig
 brew install archey
 brew install coreutils
