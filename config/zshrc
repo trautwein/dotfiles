@@ -61,4 +61,4 @@ source ~/.zsh_plugins.sh
 autoload -U promptinit; promptinit
 setopt noprompt{bang,cr,percent,subst} "prompt${^prompt_opts[@]}"
 
-mux start shell
+mux shell
