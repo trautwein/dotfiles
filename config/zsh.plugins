@@ -9,5 +9,5 @@ sindresorhus/pure
 robbyrussell/oh-my-zsh folder:plugins/brew
 robbyrussell/oh-my-zsh folder:plugins/git
 robbyrussell/oh-my-zsh folder:plugins/rbenv
+robbyrussell/oh-my-zsh folder:plugins/sudo
 robbyrussell/oh-my-zsh folder:plugins/tmux
-
