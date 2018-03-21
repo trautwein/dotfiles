@@ -19,6 +19,11 @@ set diffopt+=vertical
 set ttyfast
 set lazyredraw
 
+" Enable truecolor support
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
@@ -89,9 +94,11 @@ endif
 
 " Color scheme
 set background=dark
+
 if !has("gui_running")
   let g:gruvbox_italic=0
 endif
+
 colorscheme gruvbox
 
 " Numbers
