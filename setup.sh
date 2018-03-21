@@ -101,7 +101,6 @@ printf "${SUCCESS}"
 
 printf "Installing essential ${COLOR_CODE}App Store${COLOR_NORMAL} packages...\n"
 
-mas install 441258766  # Magnet
 mas install 1039633667 # Irvue
 
 printf "${SUCCESS}"
