@@ -108,6 +108,7 @@ printf "${SUCCESS}"
 printf "Installing essential ${COLOR_CODE}homebrew cask${COLOR_NORMAL} packages...\n"
 
 brew tap caskroom/cask
+brew cask upgrade
 brew cask install iterm2
 brew cask install google-chrome
 brew cask install dropbox
@@ -130,6 +131,12 @@ rbenv global $LATEST_RUBY_VERSION
 
 printf "${SUCCESS}"
 
+########## Setup gems
+printf "Installing essential ${COLOR_CODE}rubygems${COLOR_NORMAL}...\n"
+
+bundle update
+
+printf "${SUCCESS}"
 
 ########## Setup pip3
 printf "Seting up ${COLOR_CODE}pip3${COLOR_NORMAL}...\n"
@@ -180,13 +187,6 @@ else
   git pull
   cd
 fi
-
-printf "${SUCCESS}"
-
-########## Setup gems
-printf "Installing essential ${COLOR_CODE}rubygems${COLOR_NORMAL}...\n"
-
-gem install tmuxinator
 
 printf "${SUCCESS}"
 
