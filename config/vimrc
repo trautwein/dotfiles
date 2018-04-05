@@ -94,13 +94,8 @@ endif
 
 " Color scheme
 set background=dark
-
-if !has("gui_running")
-  let g:gruvbox_italic=0
-endif
-
-colorscheme gruvbox
-let g:lightline = { 'colorscheme': 'gruvbox'}
+colorscheme challenger_deep
+let g:lightline = { 'colorscheme': 'challenger_deep'}
 
 " Numbers
 set number

@@ -8,7 +8,7 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 " Define Plugins via Github repos
-Bundle 'morhetz/gruvbox'
+Bundle 'challenger-deep-theme/vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'danro/rename.vim'
 Plugin 'kchmck/vim-coffee-script'
