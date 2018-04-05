@@ -161,9 +161,6 @@ map <Leader>r :!ruby %<CR>
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
-" Automatically populate the g:airline_symbols dictionary with the powerline symbols
-let g:airline_powerline_fonts = 1
-
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
