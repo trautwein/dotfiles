@@ -95,7 +95,22 @@ endif
 " Color scheme
 set background=dark
 colorscheme challenger_deep
-let g:lightline = { 'colorscheme': 'challenger_deep'}
+
+" lightline
+set noshowmode
+let g:lightline = {
+\   'colorscheme': 'challenger_deep',
+\   'active': {
+\     'left': [
+\       [ 'mode', 'paste' ],
+\       [ 'readonly', 'relativepath', 'modified' ] ],
+\     'right': [
+\       [ 'lineinfo' ],
+\       [ 'percent' ],
+\       [ 'fileformat', 'fileencoding', 'filetype' ]
+\     ]
+\   }
+\ }
 
 " Numbers
 set number
