@@ -20,7 +20,7 @@
   required = true
 [core]
   editor = vim -f
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 [commit]
   gpgsign = true
 [gpg]
