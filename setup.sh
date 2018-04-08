@@ -62,47 +62,41 @@ printf "${SUCCESS}"
 
 printf "Installing essential ${COLOR_CODE}homebrew${COLOR_NORMAL} packages...\n"
 
-brew install zsh
-brew install tmux
-brew install reattach-to-user-namespace
+brew install archey
+brew install autoconf
+brew install coreutils
+brew install gist
 brew install git
 brew install gitup
-brew install tig
-brew install archey
-brew install coreutils
-brew install rbenv
-brew install ruby-build
-brew install npm
-brew install yarn
-brew install autoconf
-brew install tree
-brew install wget
-brew install gist
-brew install mas
-brew install youtube-dl
-brew install the_silver_searcher
-brew install libxml2 libxslt
-brew install vim --with-override-system-vi
-brew install optipng
-brew install librsvg
-brew install weechat
-brew install imagemagick
 brew install htop
 brew install iftop
+brew install imagemagick
+brew install librsvg
+brew install libxml2 libxslt
+brew install mas
+brew install npm
+brew install optipng
 brew install postgresql
-brew services restart postgresql
+brew install rbenv
+brew install reattach-to-user-namespace
 brew install redis
-brew services start redis
+brew install ruby-build
+brew install the_silver_searcher
+brew install tig
+brew install tmux
+brew install tree
+brew install vim --with-override-system-vi
+brew install weechat
+brew install wget
+brew install yarn
+brew install youtube-dl
+brew install zsh
+
+brew services restart postgresql
+brew services restart redis
 
 brew tap getantibody/homebrew-antibody
 brew install antibody
-
-printf "${SUCCESS}"
-
-printf "Installing essential ${COLOR_CODE}App Store${COLOR_NORMAL} packages...\n"
-
-mas install 1039633667 # Irvue
-mas install 904280696  # Things 3
 
 printf "${SUCCESS}"
 
@@ -110,15 +104,23 @@ printf "Installing essential ${COLOR_CODE}homebrew cask${COLOR_NORMAL} packages.
 
 brew tap caskroom/cask
 brew cask upgrade
-brew cask install iterm2
-brew cask install google-chrome
-brew cask install dropbox
-brew cask install docker
-brew cask install gpg-suite
-brew cask install dash
+
 brew cask install amethyst
+brew cask install dash
+brew cask install docker
+brew cask install dropbox
+brew cask install google-chrome
+brew cask install gpg-suite
+brew cask install iterm2
 
 brew cleanup
+
+printf "${SUCCESS}"
+
+printf "Installing essential ${COLOR_CODE}App Store${COLOR_NORMAL} packages...\n"
+
+mas install 1039633667 # Irvue
+mas install 904280696  # Things 3
 
 printf "${SUCCESS}"
 
@@ -208,19 +210,19 @@ printf "Setting some sensible ${COLOR_CODE}macOS${COLOR_NORMAL} preferences...\n
 
 defaults write -g InitialKeyRepeat -int 20
 defaults write -g KeyRepeat -int 1
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-defaults write com.apple.finder ShowStatusBar -bool true
-defaults write com.apple.finder ShowPathbar -bool true
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+defaults write com.apple.finder ShowPathbar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 killall Finder
 
