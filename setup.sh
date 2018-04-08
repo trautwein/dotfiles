@@ -74,6 +74,7 @@ brew install imagemagick
 brew install librsvg
 brew install libxml2 libxslt
 brew install mas
+brew install nmap
 brew install npm
 brew install optipng
 brew install postgresql
