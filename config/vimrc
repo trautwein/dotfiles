@@ -18,6 +18,7 @@ set printoptions=portrait:n,number:y
 set diffopt+=vertical
 set ttyfast
 set lazyredraw
+set updatetime=100
 
 " Enable truecolor support
 set termguicolors
