@@ -9,6 +9,7 @@ Plugin 'gmarik/vundle'
 
 " Define Plugins via Github repos
 Plugin 'IndexedSearch'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'airblade/vim-localorie'
 Plugin 'brooth/far.vim'
 Plugin 'challenger-deep-theme/vim'
