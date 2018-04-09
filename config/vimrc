@@ -103,12 +103,16 @@ let g:lightline = {
 \   'active': {
 \     'left': [
 \       [ 'mode', 'paste' ],
-\       [ 'readonly', 'relativepath', 'modified' ] ],
+\       [ 'gitbranch', 'readonly', 'relativepath', 'modified' ]
+\     ],
 \     'right': [
 \       [ 'lineinfo' ],
 \       [ 'percent' ],
 \       [ 'fileformat', 'fileencoding', 'filetype' ]
 \     ]
+\   },
+\   'component_function': {
+\     'gitbranch': 'fugitive#head',
 \   }
 \ }
 
