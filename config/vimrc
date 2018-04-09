@@ -199,8 +199,13 @@ set clipboard+=unnamed
 
 "key to insert mode with paste using F2 key
 map <F2> :set paste<CR>i
+
 " Leave paste mode on exit
 au InsertLeave * set nopaste
+
+" localorie
+nnoremap <silent> <leader>lt :call localorie#translate()<CR>
+nnoremap <silent> <leader>le :call localorie#expand_key()<CR>
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
