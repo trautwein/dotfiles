@@ -74,13 +74,12 @@ brew install imagemagick
 brew install librsvg
 brew install libxml2 libxslt
 brew install mas
+brew install neovim
 brew install nmap
 brew install npm
 brew install optipng
-brew install postgresql
 brew install rbenv
 brew install reattach-to-user-namespace
-brew install redis
 brew install ruby-build
 brew install the_silver_searcher
 brew install tig
@@ -92,9 +91,6 @@ brew install wget
 brew install yarn
 brew install youtube-dl
 brew install zsh
-
-brew services restart postgresql
-brew services restart redis
 
 brew tap getantibody/homebrew-antibody
 brew install antibody
@@ -114,6 +110,7 @@ brew cask install google-chrome
 brew cask install gpg-suite
 brew cask install iterm2
 
+brew prune
 brew cleanup
 
 printf "${SUCCESS}"
