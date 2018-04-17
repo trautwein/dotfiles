@@ -165,6 +165,9 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
+" dash mapping
+nmap <silent> <leader>d <Plug>DashSearch
+
 " execute current ruby file
 map <Leader>r :!ruby %<CR>
 
