@@ -3,6 +3,7 @@ let mapleader = ","
 
 set autowrite     " Automatically :write before running commands
 set backspace=2   " Backspace deletes like most programs in insert mode
+set cursorline
 set diffopt+=vertical
 set history=50
 set incsearch     " do incremental searching
