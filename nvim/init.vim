@@ -1,23 +1,21 @@
 " Leader
 let mapleader = ","
 
+set autowrite     " Automatically :write before running commands
 set backspace=2   " Backspace deletes like most programs in insert mode
-set nocompatible  " Use Vim settings, rather then Vi settings
-set nobackup
-set nowritebackup
-set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
+set diffopt+=vertical
 set history=50
-set ruler         " show the cursor position all the time
-set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
-set autowrite     " Automatically :write before running commands
-set guifont=Input\ Mono:h12
-set shell=/bin/zsh
-set printoptions=portrait:n,number:y 
-set diffopt+=vertical
-set ttyfast
 set lazyredraw
+set nobackup
+set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
+set nowritebackup
+set printoptions=portrait:n,number:y 
+set ruler         " show the cursor position all the time
+set shell=/bin/zsh
+set showcmd       " display incomplete commands
+set ttyfast
 set updatetime=100
 
 " Enable truecolor support
@@ -25,23 +23,17 @@ set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-" Switch syntax highlighting on, when the terminal has colors
-" Also switch on highlighting the last used search pattern.
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  syntax on
-endif
-
-if has("gui_running")
-  set macligatures
-endif
+" Enable syntax highlighting
+syntax on
 
 runtime macros/matchit.vim
 
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+" minpac
+if filereadable(expand("~/.config/nvim/init.vim.packages"))
+  command! PackUpdate call minpac#update()
+  command! PackClean  call minpac#clean()
+  source ~/.config/nvim/init.vim.packages
 endif
-
-filetype plugin indent on
 
 augroup vimrcEx
   autocmd!
@@ -66,9 +58,6 @@ augroup vimrcEx
 
   " Automatically wrap at 80 characters for Markdown
   autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-
-  " Disable sound effects in MacVim
-  autocmd! GUIEnter * set vb t_vb=
 augroup END
 
 " Softtabs, 2 spaces
@@ -208,8 +197,3 @@ au InsertLeave * set nopaste
 " localorie
 nnoremap <silent> <leader>lt :call localorie#translate()<CR>
 nnoremap <silent> <leader>le :call localorie#expand_key()<CR>
-
-" Local config
-if filereadable($HOME . "/.vimrc.local")
-  source ~/.vimrc.local
-endif

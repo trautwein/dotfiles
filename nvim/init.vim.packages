@@ -1,0 +1,41 @@
+packadd minpac
+call minpac#init()
+
+" minpac must have {'type': 'opt'} so that it can be loaded with `packadd`
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+" Other plugins
+call minpac#add('airblade/vim-gitgutter')
+call minpac#add('airblade/vim-localorie')
+call minpac#add('brooth/far.vim')
+call minpac#add('challenger-deep-theme/vim')
+call minpac#add('danro/rename.vim')
+call minpac#add('gorkunov/smartgf.vim')
+call minpac#add('itchyny/lightline.vim')
+call minpac#add('janko-m/vim-test')
+call minpac#add('kchmck/vim-coffee-script')
+call minpac#add('kien/ctrlp.vim')
+call minpac#add('mileszs/ack.vim')
+call minpac#add('rizzatti/dash.vim')
+call minpac#add('scrooloose/syntastic')
+call minpac#add('slim-template/vim-slim')
+call minpac#add('tpope/vim-bundler')
+call minpac#add('tpope/vim-endwise')
+call minpac#add('tpope/vim-fugitive')
+call minpac#add('tpope/vim-rails')
+call minpac#add('tpope/vim-rake')
+call minpac#add('tpope/vim-rbenv')
+call minpac#add('tpope/vim-sleuth')
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('vim-ruby/vim-ruby')
+call minpac#add('vim-scripts/AnsiEsc.vim')
+call minpac#add('vim-scripts/IndexedSearch')
+call minpac#add('vim-scripts/ctags.vim')
+call minpac#add('vim-scripts/groovy.vim')
+call minpac#add('vim-scripts/tComment')
+call minpac#add('vim-scripts/textobj-rubyblock')
+call minpac#add('vim-scripts/textobj-user')
+
+" Load the plugins right now
+packloadall

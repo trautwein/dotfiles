@@ -20,7 +20,7 @@
   smudge = git-lfs smudge %f
   required = true
 [core]
-  editor = vim -f
+  editor = nvim
   excludesfile = ~/.gitignore
 [commit]
   gpgsign = true

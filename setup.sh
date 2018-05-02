@@ -28,6 +28,17 @@ for FILE in $DIR/config/*; do
   ln -s ${FILE} ~/.${FILENAME}
 done
 
+mkdir -p $OLDDIR/nvim
+mkdir -p ~/.config/nvim
+for FILE in $DIR/nvim/*; do
+  FILENAME=$(basename "${FILE}")
+  printf ".config/nvim/${FILENAME}\n"
+  cp ~/.config/nvim/${FILENAME} ${OLDDIR}/nvim/${FILENAME} &>/dev/null
+  rm ~/.config/nvim/${FILENAME} &>/dev/null
+
+  ln -s ${FILE} ~/.config/nvim/${FILENAME}
+done
+
 mkdir -p $OLDDIR/tmuxinator
 mkdir -p ~/.config/tmuxinator
 for FILE in $DIR/tmuxinator/*; do
@@ -86,7 +97,6 @@ brew install the_silver_searcher
 brew install tig
 brew install tmux
 brew install tree
-brew install vim --with-override-system-vi
 brew install weechat
 brew install wget
 brew install yarn
@@ -177,17 +187,16 @@ fi
 
 printf "${SUCCESS}"
 
-########## Setup vundle
-printf "Seting up ${COLOR_CODE}vundle${COLOR_NORMAL}...\n"
+########## Setup minpac
+printf "Seting up ${COLOR_CODE}minpac${COLOR_NORMAL}...\n"
 
-if [ ! -d ~/.vim/bundle/vundle ]; then
-  mkdir -p ~/.vim/bundle/vundle
-  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-  echo "Info: Please run :BundleInstall in vim afterwards"
+if [ ! -d ~/.config/nvim/pack/minpac/opt/minpac ]; then
+  git clone https://github.com/k-takata/minpac.git ~/.config/nvim/pack/minpac/opt/minpac
 else
-  cd ~/.vim/bundle/vundle
+  cd ~/.config/nvim/pack/minpac/opt/minpac
   git pull
   cd
+  echo "Info: Please run :PackUpdate in nvim afterwards"
 fi
 
 printf "${SUCCESS}"
