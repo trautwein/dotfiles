@@ -80,6 +80,7 @@ brew install npm
 brew install optipng
 brew install rbenv
 brew install reattach-to-user-namespace
+brew install ripgrep
 brew install ruby-build
 brew install the_silver_searcher
 brew install tig
