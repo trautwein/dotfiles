@@ -91,7 +91,7 @@ let ayucolor='mirage'
 colorscheme ayu
 
 " lightline
-set noshowmode
+source ~/.config/nvim/pack/minpac/start/ayu-lightline/ayu.vim
 let g:lightline = {
 \   'colorscheme': 'ayu',
 \   'active': {
@@ -109,6 +109,10 @@ let g:lightline = {
 \     'gitbranch': 'fugitive#head',
 \   }
 \ }
+call lightline#init()
+call lightline#colorscheme()
+call lightline#update()
+set noshowmode
 
 " Numbers
 set number
