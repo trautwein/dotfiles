@@ -36,13 +36,16 @@ fi
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
+export EDITOR=nvim
+export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
-export LANG=en_US.UTF-8
-export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 export PATH="/usr/local/heroku/bin:$PATH"
-export EDITOR=nvim
+export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 export VISUAL=nvim
+
+# Exclude some alias tips
+export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="vi vim nvim"
 
 # Private ENV vars
 if [ -f ~/.zshrc.env ]; then
