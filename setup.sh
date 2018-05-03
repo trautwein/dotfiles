@@ -150,10 +150,26 @@ bundle update
 
 printf "${SUCCESS}"
 
+########## Setup pip2
+printf "Seting up ${COLOR_CODE}pip2${COLOR_NORMAL}...\n"
+
+pip2 install --upgrade pip setuptools wheel
+pip2 install --user --upgrade neovim
+
+printf "${SUCCESS}"
+
 ########## Setup pip3
 printf "Seting up ${COLOR_CODE}pip3${COLOR_NORMAL}...\n"
 
 pip3 install --upgrade pip setuptools wheel
+pip3 install --user --upgrade neovim
+
+printf "${SUCCESS}"
+
+########## Setup npm
+printf "Seting up ${COLOR_CODE}npm${COLOR_NORMAL}...\n"
+
+npm install -g neovim
 
 printf "${SUCCESS}"
 
