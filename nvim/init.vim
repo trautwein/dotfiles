@@ -87,12 +87,13 @@ endif
 
 " Color scheme
 set background=dark
-colorscheme challenger_deep
+let ayucolor='mirage'
+colorscheme ayu
 
 " lightline
 set noshowmode
 let g:lightline = {
-\   'colorscheme': 'challenger_deep',
+\   'colorscheme': 'ayu',
 \   'active': {
 \     'left': [
 \       [ 'mode', 'paste' ],
