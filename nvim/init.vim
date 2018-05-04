@@ -31,13 +31,6 @@ syntax on
 
 runtime macros/matchit.vim
 
-" minpac
-if filereadable(expand("~/.config/nvim/init.vim.packages"))
-  command! PackUpdate call minpac#update()
-  command! PackClean  call minpac#clean()
-  source ~/.config/nvim/init.vim.packages
-endif
-
 augroup vimrcEx
   autocmd!
 
@@ -87,13 +80,11 @@ endif
 
 " Color scheme
 set background=dark
-let ayucolor='mirage'
-colorscheme ayu
+colorscheme challenger_deep
 
 " lightline
-source ~/.config/nvim/pack/minpac/start/ayu-lightline/ayu.vim
 let g:lightline = {
-\   'colorscheme': 'ayu',
+\   'colorscheme': 'challenger_deep',
 \   'active': {
 \     'left': [
 \       [ 'mode', 'paste' ],
@@ -109,10 +100,6 @@ let g:lightline = {
 \     'gitbranch': 'fugitive#head',
 \   }
 \ }
-call lightline#init()
-call lightline#colorscheme()
-call lightline#update()
-set noshowmode
 
 " Numbers
 set number
@@ -208,3 +195,10 @@ au InsertLeave * set nopaste
 " localorie
 nnoremap <silent> <leader>lt :call localorie#translate()<CR>
 nnoremap <silent> <leader>le :call localorie#expand_key()<CR>
+
+" minpac
+if filereadable(expand("~/.config/nvim/init.vim.packages"))
+  command! PackUpdate call minpac#update()
+  command! PackClean  call minpac#clean()
+  source ~/.config/nvim/init.vim.packages
+endif

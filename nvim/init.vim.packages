@@ -7,8 +7,8 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 " Other plugins
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('airblade/vim-localorie')
-call minpac#add('ayu-theme/ayu-vim')
 call minpac#add('brooth/far.vim')
+call minpac#add('challenger-deep-theme/vim')
 call minpac#add('danro/rename.vim')
 call minpac#add('itchyny/lightline.vim')
 call minpac#add('janko-m/vim-test')
@@ -37,7 +37,6 @@ call minpac#add('vim-scripts/groovy.vim')
 call minpac#add('vim-scripts/tComment')
 call minpac#add('vim-scripts/textobj-rubyblock')
 call minpac#add('vim-scripts/textobj-user')
-call minpac#add('yarisgutierrez/ayu-lightline')
 
 " Load the plugins right now
 packloadall
