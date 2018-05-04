@@ -181,6 +181,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" Remove any search highlighting
+nnoremap <silent> <leader>c :nohlsearch<CR>
+
 " configure syntastic syntax checking to check on open as well as save
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
