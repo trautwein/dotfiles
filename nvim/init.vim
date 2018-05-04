@@ -2,20 +2,21 @@
 let mapleader = ","
 
 set autowrite     " Automatically :write before running commands
-set backspace=2   " Backspace deletes like most programs in insert mode
+set backspace=2        " Backspace deletes like most programs in insert mode
 set cursorline
 set diffopt+=vertical
 set history=50
-set incsearch     " do incremental searching
-set laststatus=2  " Always display the status line
+set inccommand=nosplit " preview the effects of substitute live
+set incsearch          " do incremental searching
+set laststatus=2       " Always display the status line
 set lazyredraw
 set nobackup
-set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
+set noswapfile         " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 set nowritebackup
 set printoptions=portrait:n,number:y 
-set ruler         " show the cursor position all the time
+set ruler              " show the cursor position all the time
 set shell=/bin/zsh
-set showcmd       " display incomplete commands
+set showcmd            " display incomplete commands
 set ttyfast
 set updatetime=100
 
