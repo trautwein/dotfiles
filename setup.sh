@@ -151,7 +151,7 @@ bundle update
 printf "${SUCCESS}"
 
 ########## Setup pip2
-printf "Seting up ${COLOR_CODE}pip2${COLOR_NORMAL}...\n"
+printf "Setting up ${COLOR_CODE}pip2${COLOR_NORMAL}...\n"
 
 pip2 install --upgrade pip setuptools wheel
 pip2 install --user --upgrade neovim
@@ -159,7 +159,7 @@ pip2 install --user --upgrade neovim
 printf "${SUCCESS}"
 
 ########## Setup pip3
-printf "Seting up ${COLOR_CODE}pip3${COLOR_NORMAL}...\n"
+printf "Setting up ${COLOR_CODE}pip3${COLOR_NORMAL}...\n"
 
 pip3 install --upgrade pip setuptools wheel
 pip3 install --user --upgrade neovim
@@ -167,7 +167,7 @@ pip3 install --user --upgrade neovim
 printf "${SUCCESS}"
 
 ########## Setup npm
-printf "Seting up ${COLOR_CODE}npm${COLOR_NORMAL}...\n"
+printf "Setting up ${COLOR_CODE}npm${COLOR_NORMAL}...\n"
 
 npm install -g neovim
 
@@ -183,7 +183,7 @@ fi
 printf "${SUCCESS}"
 
 ########## Setup Antibody
-printf "Seting up ${COLOR_CODE}Antibody${COLOR_NORMAL}...\n"
+printf "Setting up ${COLOR_CODE}Antibody${COLOR_NORMAL}...\n"
 
 antibody update
 antibody bundle < ~/.zsh.plugins > ~/.zsh_plugins.sh
@@ -191,7 +191,7 @@ antibody bundle < ~/.zsh.plugins > ~/.zsh_plugins.sh
 printf "${SUCCESS}"
 
 ########## Setup tpm
-printf "Seting up ${COLOR_CODE}tmux plugin manager${COLOR_NORMAL}...\n"
+printf "Setting up ${COLOR_CODE}tmux plugin manager${COLOR_NORMAL}...\n"
 
 if [ ! -d ~/.tmux/plugins/tpm ]; then
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -204,7 +204,7 @@ fi
 printf "${SUCCESS}"
 
 ########## Setup minpac
-printf "Seting up ${COLOR_CODE}minpac${COLOR_NORMAL}...\n"
+printf "Setting up ${COLOR_CODE}minpac${COLOR_NORMAL}...\n"
 
 if [ ! -d ~/.config/nvim/pack/minpac/opt/minpac ]; then
   git clone https://github.com/k-takata/minpac.git ~/.config/nvim/pack/minpac/opt/minpac
