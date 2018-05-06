@@ -121,6 +121,7 @@ brew cask install dropbox
 brew cask install google-chrome
 brew cask install gpg-suite
 brew cask install iterm2
+brew cask install macdown
 
 brew prune
 brew cleanup
