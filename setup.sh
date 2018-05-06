@@ -76,6 +76,7 @@ printf "Installing essential ${COLOR_CODE}homebrew${COLOR_NORMAL} packages...\n"
 brew install archey
 brew install autoconf
 brew install coreutils
+brew install ffmpeg
 brew install gist
 brew install git
 brew install gitup
