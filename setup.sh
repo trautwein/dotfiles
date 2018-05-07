@@ -166,6 +166,8 @@ printf "Setting up ${COLOR_CODE}pip3${COLOR_NORMAL}...\n"
 pip3 install --upgrade pip setuptools wheel
 pip3 install --user --upgrade neovim
 
+pip3 install termdown
+
 printf "${SUCCESS}"
 
 ########## Setup npm
