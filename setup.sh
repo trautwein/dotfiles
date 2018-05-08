@@ -97,6 +97,7 @@ brew install ruby-build
 brew install the_silver_searcher
 brew install tig
 brew install tmux
+brew install tokei
 brew install tree
 brew install weechat
 brew install wget
