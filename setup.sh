@@ -74,6 +74,7 @@ printf "${SUCCESS}"
 printf "Installing essential ${COLOR_CODE}homebrew${COLOR_NORMAL} packages...\n"
 
 brew install archey
+brew install asciinema
 brew install autoconf
 brew install coreutils
 brew install ffmpeg
