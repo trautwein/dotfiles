@@ -1,7 +1,7 @@
 " Leader
 let mapleader = ","
 
-set autowrite     " Automatically :write before running commands
+set autowrite          " Automatically :write before running commands
 set backspace=2        " Backspace deletes like most programs in insert mode
 set cursorline
 set diffopt+=vertical
@@ -13,7 +13,7 @@ set lazyredraw
 set nobackup
 set noswapfile         " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 set nowritebackup
-set printoptions=portrait:n,number:y 
+set printoptions=portrait:n,number:y
 set ruler              " show the cursor position all the time
 set shell=/bin/zsh
 set showcmd            " display incomplete commands
@@ -107,9 +107,6 @@ set numberwidth=5
 
 " Ignore case when searching
 set ic
-
-" Snippets are activated by Shift+Tab
-let g:snippetsEmu_key = "<S-Tab>"
 
 " set ruby path (using rbenv)
 let g:ruby_path = system('echo $HOME/.rbenv/shims')
