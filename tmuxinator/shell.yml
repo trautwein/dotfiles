@@ -43,4 +43,4 @@ root: ~/
 # post: tmux -CC attach -t shell
 
 windows:
-  - main:
+  - main: clear

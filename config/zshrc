@@ -50,3 +50,9 @@ source ~/.zsh_plugins.sh
 autoload -U promptinit; promptinit
 setopt noprompt{bang,cr,percent,subst} "prompt${^prompt_opts[@]}"
 setopt autocd
+
+# Attach to/create tmux session
+if [ -z "$TMUX" ]
+then
+    mux shell
+fi

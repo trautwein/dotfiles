@@ -43,4 +43,4 @@ root: ~/
 # post: tmux -CC attach -t irc
 
 windows:
-  - irc: weechat
+  - irc: clear && weechat
