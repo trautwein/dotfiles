@@ -132,6 +132,7 @@ printf "${SUCCESS}"
 
 printf "Installing essential ${COLOR_CODE}App Store${COLOR_NORMAL} packages...\n"
 
+mas install 1362171212 # Caffeinated
 mas install 1039633667 # Irvue
 mas install 904280696  # Things 3
 
