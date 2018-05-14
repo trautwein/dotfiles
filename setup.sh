@@ -91,6 +91,7 @@ brew install neovim
 brew install nmap
 brew install npm
 brew install optipng
+brew install progress
 brew install rbenv
 brew install reattach-to-user-namespace
 brew install ripgrep
