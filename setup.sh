@@ -225,18 +225,6 @@ fi
 
 printf "${SUCCESS}"
 
-########## Install powerline fonts
-printf "Installing ${COLOR_CODE}powerline${COLOR_NORMAL} fonts...\n"
-
-rm -rf /tmp/fonts
-git clone https://github.com/powerline/fonts.git /tmp/fonts
-cd /tmp/fonts
-./install.sh
-cd
-rm -rf /tmp/fonts
-
-printf "${SUCCESS}"
-
 ########## Set macOS preferences
 printf "Setting some sensible ${COLOR_CODE}macOS${COLOR_NORMAL} preferences...\n"
 
