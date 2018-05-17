@@ -136,8 +136,15 @@ printf "Installing essential ${COLOR_CODE}App Store${COLOR_NORMAL} packages...\n
 mas install 1362171212 # Caffeinated
 mas install 1039633667 # Irvue
 mas install 904280696  # Things 3
+mas install 497799835  # Xcode
 
-printf "${SUCCESS}"
+printf "${success}"
+
+printf "Installing ${COLOR_CODE}Xcode command line tools${COLOR_NORMAL}...\n"
+
+xcode-select --install
+
+printf "${success}"
 
 ########## Build and setup ruby
 printf "Building the latest ${COLOR_CODE}ruby${COLOR_NORMAL} and setting it as default...\n"
