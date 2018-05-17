@@ -130,11 +130,11 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 " Index ctags from any project, including those outside Rails
-map <Leader>ct :!ctags -R .<CR>
+nmap <Leader>ct :!ctags -R .<CR>
 
 " Explorer Mode
 let g:netrw_liststyle=3
-map <Leader>e :Explore<CR>
+nmap <Leader>e :Explore<CR>
 
 " Switch between the last two files
 nnoremap <leader><leader> <c-^>
@@ -150,7 +150,7 @@ nmap <silent> <leader>g :TestVisit<CR>
 nmap <silent> <leader>d <Plug>DashSearch
 
 " execute current ruby file
-map <Leader>r :!ruby %<CR>
+nmap <Leader>r :!ruby %<CR>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
@@ -166,7 +166,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " Remove any search highlighting
-nnoremap <silent> <leader>c :nohlsearch<CR>
+nnoremap <nowait> <silent> <leader>c :nohlsearch<CR>
 
 " configure syntastic syntax checking to check on open as well as save
 set statusline+=%#warningmsg#
@@ -182,9 +182,6 @@ let g:syntastic_ruby_checkers = ['mri']
 
 " Use OS X clipboard
 set clipboard+=unnamed
-
-"key to insert mode with paste using F2 key
-map <F2> :set paste<CR>i
 
 " Leave paste mode on exit
 au InsertLeave * set nopaste
