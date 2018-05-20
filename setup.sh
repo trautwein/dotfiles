@@ -117,7 +117,6 @@ printf "Installing essential ${COLOR_CODE}homebrew cask${COLOR_NORMAL} packages.
 brew tap caskroom/cask
 brew cask upgrade
 
-brew cask install amethyst
 brew cask install dash
 brew cask install docker
 brew cask install dropbox
@@ -135,6 +134,7 @@ printf "Installing essential ${COLOR_CODE}App Store${COLOR_NORMAL} packages...\n
 
 mas install 1362171212 # Caffeinated
 mas install 1039633667 # Irvue
+mas install 441258766  # Magnet
 mas install 904280696  # Things 3
 mas install 497799835  # Xcode
 
