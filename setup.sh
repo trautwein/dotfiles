@@ -258,6 +258,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 killall Finder
+source ~/.zshrc
 
 printf "${SUCCESS}"
 
