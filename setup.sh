@@ -73,43 +73,49 @@ printf "${SUCCESS}"
 
 printf "Installing essential ${COLOR_CODE}homebrew${COLOR_NORMAL} packages...\n"
 
-brew install archey
-brew install asciinema
-brew install autoconf
-brew install coreutils
-brew install ffmpeg
-brew install gist
-brew install git
-brew install gitup
-brew install htop
-brew install iftop
-brew install imagemagick
-brew install librsvg
-brew install libxml2 libxslt
-brew install mas
-brew install neovim
-brew install nmap
-brew install npm
-brew install optipng
-brew install progress
-brew install rbenv
-brew install reattach-to-user-namespace
-brew install ripgrep
-brew install ruby-build
-brew install terraform
-brew install the_silver_searcher
-brew install tig
-brew install tmux
-brew install tokei
-brew install tree
-brew install weechat
-brew install wget
-brew install yarn
-brew install youtube-dl
-brew install zsh
+brew install \
+  archey \
+  asciinema \
+  autoconf \
+  coreutils \
+  ffmpeg \
+  getantibody/homebrew-antibody/antibody \
+  gist \
+  git \
+  gitup \
+  htop \
+  iftop \
+  imagemagick \
+  librsvg \
+  libxml2 libxslt \
+  mas \
+  neovim \
+  nmap \
+  npm \
+  optipng \
+  postgres \
+  progress \
+  rbenv \
+  reattach-to-user-namespace \
+  redis \
+  ripgrep \
+  ruby-build \
+  the_silver_searcher \
+  tig \
+  tmux \
+  tokei \
+  tree \
+  weechat \
+  wget \
+  yarn \
+  youtube-dl \
+  zsh
 
-brew tap getantibody/homebrew-antibody
-brew install antibody
+brew prune
+brew cleanup
+
+brew services cleanup
+brew services restart --all
 
 printf "${SUCCESS}"
 
@@ -118,16 +124,15 @@ printf "Installing essential ${COLOR_CODE}homebrew cask${COLOR_NORMAL} packages.
 brew tap caskroom/cask
 brew cask upgrade
 
-brew cask install dash
-brew cask install docker
-brew cask install dropbox
-brew cask install google-chrome
-brew cask install gpg-suite
-brew cask install iterm2
-brew cask install macdown
+brew cask install \
+  dash \
+  dropbox \
+  google-chrome \
+  gpg-suite \
+  iterm2 \
+  macdown
 
-brew prune
-brew cleanup
+brew cask cleanup
 
 printf "${SUCCESS}"
 
