@@ -140,6 +140,7 @@ printf "Installing essential ${COLOR_CODE}App Store${COLOR_NORMAL} packages...\n
 mas install 1362171212 # Caffeinated
 mas install 1039633667 # Irvue
 mas install 441258766  # Magnet
+mas install 1262957439 # Textual 7
 mas install 425424353  # The Unarchiver
 mas install 904280696  # Things 3
 mas install 497799835  # Xcode
