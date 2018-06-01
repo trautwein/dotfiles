@@ -105,7 +105,6 @@ brew install \
   tmux \
   tokei \
   tree \
-  weechat \
   wget \
   yarn \
   youtube-dl \
