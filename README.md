@@ -1,1 +1,1 @@
-![Screenshot](https://cdn.rawgit.com/neowork/dotfiles/master/misc/screenshot.png)
+![Screenshot](misc/screenshot.png)
