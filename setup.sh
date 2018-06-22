@@ -126,6 +126,7 @@ brew cask upgrade
 brew cask install \
   dash \
   dropbox \
+  etcher \
   google-chrome \
   gpg-suite \
   iterm2 \
