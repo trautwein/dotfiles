@@ -130,7 +130,8 @@ brew cask install \
   google-chrome \
   gpg-suite \
   iterm2 \
-  macdown
+  macdown \
+  paintcode
 
 brew cask cleanup
 
