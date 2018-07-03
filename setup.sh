@@ -100,6 +100,7 @@ brew install \
   redis \
   ripgrep \
   ruby-build \
+  swiftlint \
   the_silver_searcher \
   tig \
   tmux \
