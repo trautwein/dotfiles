@@ -37,8 +37,11 @@ fi
 
 unsetopt correct_all
 
-# Customize to your needs...
+# rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # Tmuxinator config
 if [ -f ~/.tmuxinator.zsh ]; then
