@@ -128,6 +128,7 @@ brew cask install \
   dash \
   dropbox \
   etcher \
+  gitup \
   google-chrome \
   gpg-suite \
   iterm2 \
