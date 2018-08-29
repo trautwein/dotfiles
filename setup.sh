@@ -106,6 +106,7 @@ brew install \
   tmux \
   tokei \
   tree \
+  vapor/tap/vapor \
   wget \
   yarn \
   youtube-dl \
