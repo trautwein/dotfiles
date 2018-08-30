@@ -134,7 +134,8 @@ brew cask install \
   gpg-suite \
   iterm2 \
   macdown \
-  paintcode
+  paintcode \
+  psequel
 
 brew cask cleanup
 
