@@ -129,7 +129,6 @@ brew cask install \
   dash \
   dropbox \
   etcher \
-  fastlane \
   gitup \
   google-chrome \
   gpg-suite \
