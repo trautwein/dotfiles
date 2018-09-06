@@ -82,7 +82,7 @@ brew install \
   getantibody/homebrew-antibody/antibody \
   gist \
   git \
-  gitup \
+  git-flow-avh \
   htop \
   iftop \
   imagemagick \
