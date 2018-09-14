@@ -84,6 +84,7 @@ brew install \
   git \
   git-flow-avh \
   htop \
+  hugo \
   iftop \
   imagemagick \
   librsvg \
