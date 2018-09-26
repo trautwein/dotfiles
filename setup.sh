@@ -83,6 +83,7 @@ brew install \
   gist \
   git \
   git-flow-avh \
+  glances \
   htop \
   hugo \
   iftop \
