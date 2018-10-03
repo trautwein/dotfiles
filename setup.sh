@@ -137,7 +137,8 @@ brew cask install \
   iterm2 \
   macdown \
   paintcode \
-  psequel
+  psequel \
+  vlc
 
 brew cask cleanup
 
