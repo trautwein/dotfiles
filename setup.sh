@@ -78,6 +78,7 @@ brew install \
   asciinema \
   autoconf \
   coreutils \
+  exiftool \
   ffmpeg \
   getantibody/homebrew-antibody/antibody \
   gist \
