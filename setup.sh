@@ -249,37 +249,5 @@ fi
 
 printf "${SUCCESS}"
 
-########## Setup Cloud 66 Toolbelt
-printf "Setting up ${COLOR_CODE}Cloud 66 Toolbelt${COLOR_NORMAL}...\n"
-
-curl -sSL https://s3.amazonaws.com/downloads.cloud66.com/cx_installation/cx_install.sh | bash
-cx login
-
-printf "${SUCCESS}"
-
-########## Set macOS preferences
-printf "Setting some sensible ${COLOR_CODE}macOS${COLOR_NORMAL} preferences...\n"
-
-defaults write -g InitialKeyRepeat -int 20
-defaults write -g KeyRepeat -int 1
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
-defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
-defaults write com.apple.finder ShowPathbar -bool true
-defaults write com.apple.finder ShowStatusBar -bool true
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-
-killall Finder
-source ~/.zshrc
-
-printf "${SUCCESS}"
-
 ########## The End
 printf "${COLOR_SUCCESS}That's it!${COLOR_NORMAL}\n"
