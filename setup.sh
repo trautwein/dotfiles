@@ -110,6 +110,7 @@ brew install \
   tokei \
   tree \
   vapor/tap/vapor \
+  watch \
   wget \
   yarn \
   youtube-dl \
