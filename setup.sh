@@ -89,6 +89,7 @@ brew install \
   hugo \
   iftop \
   imagemagick \
+  jq \
   librsvg \
   libxml2 libxslt \
   mas \
