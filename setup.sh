@@ -131,7 +131,6 @@ brew tap caskroom/cask
 brew cask upgrade
 
 brew cask install \
-  bitbar \
   dash \
   dropbox \
   etcher \
