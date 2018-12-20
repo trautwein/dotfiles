@@ -7,8 +7,8 @@ petervanderdoes/git-flow-completion
 sindresorhus/pure
 zsh-users/zsh-completions
 
-robbyrussell/oh-my-zsh folder:plugins/brew
-robbyrussell/oh-my-zsh folder:plugins/git
-robbyrussell/oh-my-zsh folder:plugins/rbenv
-robbyrussell/oh-my-zsh folder:plugins/sudo
-robbyrussell/oh-my-zsh folder:plugins/tmux
+robbyrussell/oh-my-zsh path:plugins/brew
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/rbenv
+robbyrussell/oh-my-zsh path:plugins/sudo
+robbyrussell/oh-my-zsh path:plugins/tmux
