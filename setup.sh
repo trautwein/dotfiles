@@ -132,6 +132,7 @@ brew cask upgrade
 
 brew cask install \
   dash \
+  db-browser-for-sqlite \
   dropbox \
   etcher \
   tower \
