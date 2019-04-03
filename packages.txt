@@ -129,6 +129,7 @@ patch
 pavucontrol
 pciutils
 perl
+pgadmin4
 pkgconf
 playerctl
 plymouth
