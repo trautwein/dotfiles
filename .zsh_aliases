@@ -1,4 +1,6 @@
-alias ls="ls --color=auto"
-alias vim="nvim"
+alias be="bundle exec"
+alias grip="grep --ignore-case"
 alias icat="kitty +kitten icat"
+alias ls="ls --color=auto"
 alias ssh="kitty +kitten ssh"
+alias vim="nvim"
