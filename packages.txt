@@ -116,6 +116,7 @@ networkmanager
 newaita-icons-git
 nfs-utils
 nmap
+node-gyp
 noto-fonts-emoji
 openssh
 openvpn
@@ -133,8 +134,10 @@ playerctl
 plymouth
 plymouth-theme-arch-charge
 polybar
+postgresql
 powertop
 procps-ng
+protobuf
 psmisc
 pulseaudio
 pulseaudio-alsa
@@ -146,6 +149,7 @@ python2
 ranger
 rawtherapee
 rbenv
+redis
 reiserfsprogs
 rhash
 rofi
@@ -201,5 +205,6 @@ xorg-xinput
 xorg-xlsfonts
 xorg-xprop
 xorg-xrdb
+yarn
 zsh
 zsh-completions
