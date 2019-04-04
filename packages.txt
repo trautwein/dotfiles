@@ -70,6 +70,7 @@ gutenprint
 gvfs-smb
 gzip
 htop
+hugo
 i3-gaps
 imlib2
 inetutils
@@ -183,6 +184,7 @@ tlp
 tree
 trizen
 ttf-dejavu
+ttf-emojione
 ttf-hack
 ttf-liberation
 ttf-unifont
