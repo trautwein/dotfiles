@@ -8,7 +8,6 @@ antibody
 arandr
 arc-gtk-theme
 aspell
-authy
 autoconf
 autojump
 automake
@@ -198,6 +197,7 @@ vi
 vlc
 w3m
 which
+whois
 wpa_supplicant
 xf86-video-intel
 xfsprogs
