@@ -9,7 +9,7 @@ unsetopt beep
 bindkey -v
 bindkey '^R' history-incremental-pattern-search-backward
 
-zstyle :compinstall filename "$HOME/.zshrc"
+zstyle :compinstall filename '/home/trautwein/.zshrc'
 
 # Autocompletion
 autoload -Uz compinit
