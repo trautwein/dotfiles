@@ -30,3 +30,6 @@ promptinit
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# autojump
+source /etc/profile.d/autojump.zsh

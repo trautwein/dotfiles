@@ -10,6 +10,7 @@ arc-gtk-theme
 aspell
 authy
 autoconf
+autojump
 automake
 autorandr
 bash
