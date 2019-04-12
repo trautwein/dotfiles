@@ -22,6 +22,7 @@ bluez-utils
 borg
 bzip2
 cabextract
+ccache
 chromium
 cmake
 compton
@@ -69,6 +70,7 @@ groff
 gutenprint
 gvfs-smb
 gzip
+heroku-cli
 htop
 hugo
 i3-gaps
@@ -119,6 +121,7 @@ nfs-utils
 nmap
 node-gyp
 noto-fonts-emoji
+obs-studio
 openssh
 openvpn
 otf-font-awesome
@@ -164,6 +167,7 @@ scribus
 sed
 shadow
 siji-git
+slack-term
 smartmontools
 smbclient
 spotify
@@ -181,10 +185,12 @@ the_silver_searcher
 thunderbird
 tig
 tlp
+tpm2-tools
 tree
 trizen
 ttf-dejavu
 ttf-emojione
+ttf-google-fonts-git
 ttf-hack
 ttf-liberation
 ttf-unifont
@@ -206,9 +212,11 @@ xorg-xbacklight
 xorg-xev
 xorg-xfd
 xorg-xinput
+xorg-xkill
 xorg-xlsfonts
 xorg-xprop
 xorg-xrdb
 yarn
+zeal
 zsh
 zsh-completions
