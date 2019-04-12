@@ -200,6 +200,9 @@ bindsym XF86Display exec --no-startup-id autorandr --change --force && ~/.config
 # Enpass
 bindsym $mod+p exec --no-startup-id /opt/enpass/Enpass showassistant
 
+# Zeal
+bindsym $mod+z exec --no-startup-id zeal
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #bar {
