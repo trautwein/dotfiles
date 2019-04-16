@@ -7,6 +7,7 @@ alsa-utils
 antibody
 arandr
 arc-gtk-theme
+aria2
 aspell
 autoconf
 autojump
@@ -56,6 +57,7 @@ fwupd
 gawk
 gcc
 gcc-libs
+gdb
 geteltorito
 gettext
 gimp
@@ -167,7 +169,6 @@ scribus
 sed
 shadow
 siji-git
-slack-term
 smartmontools
 smbclient
 spotify
