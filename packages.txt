@@ -16,6 +16,7 @@ autorandr
 bash
 bc
 bdf-unifont
+bind-tools
 binutils
 bison
 blueman
@@ -62,6 +63,7 @@ geteltorito
 gettext
 gimp
 git
+git-cola
 glances
 glibc
 glusterfs
@@ -169,6 +171,7 @@ scribus
 sed
 shadow
 siji-git
+slack-desktop
 smartmontools
 smbclient
 spotify
