@@ -111,7 +111,7 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8"
+set $ws8 "8: Slack"
 set $ws9 "9: Email"
 set $ws10 "10:Spotify"
 
@@ -220,7 +220,7 @@ gaps inner 10
 gaps outer 20
 
 # Workspace assignments
-#assign [class="Spotify"] $ws10
+assign [class="Slack"] $ws8
 assign [class="Thunderbird"] $ws9
 for_window [class="Spotify"] move to workspace $ws10
 
@@ -260,3 +260,6 @@ exec --no-startup-id telegram-desktop -startintray
 
 # Spotify
 exec --no-startup-id spotify
+
+# Slack
+exec --no-startup-id slack
