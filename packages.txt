@@ -59,6 +59,7 @@ gawk
 gcc
 gcc-libs
 gdb
+geeqie
 geteltorito
 gettext
 gimp
@@ -67,7 +68,9 @@ git-cola
 glances
 glibc
 glusterfs
+gnome-mpv
 gotop
+gpa
 gparted
 grep
 groff
@@ -93,6 +96,9 @@ less
 libreoffice-fresh
 libreoffice-fresh-de
 libtool
+libva-intel-driver
+libva-mesa-driver
+libva-utils
 licenses
 light-locker
 light-locker-settings
@@ -112,10 +118,13 @@ make
 man-db
 man-pages
 mdadm
+mediawriter
+mpv
 msr-tools
 nano
 nautilus
 neofetch
+neomutt
 neovim
 netctl
 network-manager-applet
@@ -171,6 +180,7 @@ scribus
 sed
 shadow
 siji-git
+simple-scan
 slack-desktop
 smartmontools
 smbclient
@@ -201,8 +211,10 @@ ttf-unifont
 tumbler
 udiskie
 unzip
+urlview
 usbutils
 util-linux
+vdpauinfo
 vi
 vlc
 w3m
@@ -221,6 +233,7 @@ xorg-xlsfonts
 xorg-xprop
 xorg-xrdb
 yarn
+youtube-dl
 zeal
 zsh
 zsh-completions
