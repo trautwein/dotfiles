@@ -3,6 +3,10 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+# Default editor
+export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
+
 setopt appendhistory autocd extendedglob nomatch notify
 unsetopt beep
 
