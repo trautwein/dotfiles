@@ -1,3 +1,6 @@
+# Path
+export PATH="$HOME/.local/bin:$PATH"
+
 # History
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -36,4 +39,9 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # autojump
-source /etc/profile.d/autojump.zsh
+source /etc/profile.d/autojump.sh
+
+# sway
+if [ "$(tty)" = "/dev/tty1" ]; then
+  exec sway
+fi
