@@ -1,0 +1,7 @@
+antibody
+enpass-bin
+google-chrome
+rbenv
+ruby-build
+s-tui
+yay
