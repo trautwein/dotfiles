@@ -2,9 +2,12 @@
 export PATH="$HOME/.local/bin:$PATH"
 
 # History
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+setopt inc_append_history
+setopt share_history
 
 # Default editor
 export EDITOR=/usr/bin/nvim
