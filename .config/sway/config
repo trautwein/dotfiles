@@ -209,6 +209,21 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+#
+# System:
+#
+mode "system" {
+    bindsym l mode "default"; exec swaylock
+    bindsym s mode "default"; exec systemctl suspend
+    bindsym r mode "default"; exec systemctl reboot
+    bindsym p mode "default"; exec systemctl poweroff
+
+    # return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Escape mode "system"
+
 # Move container to the center of the screen
 bindsym $mod+c move position center
 
