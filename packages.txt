@@ -43,6 +43,7 @@ git
 glibc
 google-chrome
 grep
+grim
 groff
 gzip
 htop
@@ -93,6 +94,7 @@ playerctl
 powertop
 procps-ng
 psmisc
+python-pip
 ranger
 rbenv
 reiserfsprogs
@@ -106,6 +108,7 @@ seahorse
 sed
 shadow
 simple-scan
+slurp
 smartmontools
 sudo
 sway
@@ -117,6 +120,7 @@ systemd-sysvcompat
 tar
 texinfo
 the_silver_searcher
+thunar
 tig
 tlp
 ttf-joypixels
@@ -124,6 +128,7 @@ usbutils
 util-linux
 vi
 w3m
+waybar
 which
 wpa_supplicant
 xdg-utils
