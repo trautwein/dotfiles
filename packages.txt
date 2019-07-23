@@ -45,6 +45,7 @@ google-chrome
 grep
 grim
 groff
+gvfs
 gzip
 htop
 iftop
@@ -110,6 +111,7 @@ shadow
 simple-scan
 slurp
 smartmontools
+spotify
 sudo
 sway
 swayidle
@@ -121,9 +123,12 @@ tar
 texinfo
 the_silver_searcher
 thunar
+thunar-volman
 tig
 tlp
 ttf-joypixels
+ttf-material-design-icons-git
+udisks2
 usbutils
 util-linux
 vi

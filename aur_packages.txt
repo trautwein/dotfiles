@@ -4,5 +4,7 @@ google-chrome
 rbenv
 ruby-build
 s-tui
+spotify
 swaylock-effects-git
+ttf-material-design-icons-git
 yay
