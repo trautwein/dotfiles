@@ -113,7 +113,7 @@ smartmontools
 sudo
 sway
 swayidle
-swaylock
+swaylock-effects-git
 sysfsutils
 systemd
 systemd-sysvcompat
