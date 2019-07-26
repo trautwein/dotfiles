@@ -65,10 +65,16 @@ exec swayidle -w \
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
-input "1:1:AT_Translated_Set_2_keyboard" {
+input type:keyboard {
     xkb_layout us
     xkb_variant altgr-intl
     xkb_options caps:escape
+    xkb_numlock enabled
+}
+
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
 }
 
 ### Key bindings
@@ -286,5 +292,8 @@ bindsym $mod+p exec /opt/enpass/Enpass showassistant
 
 # Zeal
 bindsym $mod+z exec zeal
+
+# Device specific configuration
+include ~/.config/sway/config.d/*
 
 include /etc/sway/config.d/*
