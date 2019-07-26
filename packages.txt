@@ -85,6 +85,7 @@ netctl
 nmap
 openssh
 openvpn
+otf-font-awesome
 pacman
 patch
 pavucontrol
@@ -95,6 +96,8 @@ playerctl
 powertop
 procps-ng
 psmisc
+pulseaudio
+pulseaudio-alsa
 python-pip
 ranger
 rbenv
