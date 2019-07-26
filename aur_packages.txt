@@ -1,6 +1,7 @@
 antibody
 enpass-bin
 google-chrome
+gotop-bin
 rbenv
 ruby-build
 s-tui
