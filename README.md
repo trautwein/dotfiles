@@ -14,7 +14,9 @@ SRCEXT='.src.tar.xz'
 ```
 ## Font configuration
 ### Install Fonts
+```zsh
 sudo pacman -S ttf-dejavu ttf-liberation noto-fonts
+```
 
 ### Enable font presets
 ```zsh
