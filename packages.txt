@@ -99,6 +99,7 @@ pciutils
 perl
 pkgconf
 playerctl
+postgresql
 powertop
 procps-ng
 psmisc
