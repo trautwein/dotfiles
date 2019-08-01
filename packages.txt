@@ -1,6 +1,7 @@
 ack
 acpi
 acpi_call
+alsa-tools
 alsa-utils
 antibody
 aspell
@@ -15,6 +16,7 @@ bluez-utils
 bzip2
 coreutils
 cryptsetup
+ctags
 cups
 device-mapper
 dhcpcd
@@ -24,6 +26,7 @@ e2fsprogs
 efibootmgr
 enpass-bin
 ethtool
+exfat-utils
 fakeroot
 file
 filesystem
@@ -42,12 +45,14 @@ gimp
 git
 glibc
 google-chrome
+gotop-bin
 grep
 grim
 groff
 gvfs
 gzip
 htop
+ifplugd
 iftop
 inetutils
 intel-ucode
@@ -83,6 +88,7 @@ neofetch
 neovim
 netctl
 nmap
+noto-fonts
 openssh
 openvpn
 otf-font-awesome
@@ -98,6 +104,7 @@ procps-ng
 psmisc
 pulseaudio
 pulseaudio-alsa
+pulseaudio-modules-bt-git
 python-pip
 ranger
 rbenv
@@ -130,11 +137,13 @@ thunar-volman
 tig
 tlp
 ttf-joypixels
+ttf-liberation
 ttf-material-design-icons-git
 udisks2
 usbutils
 util-linux
 vi
+vlc
 w3m
 waybar
 which

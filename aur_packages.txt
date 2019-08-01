@@ -2,6 +2,8 @@ antibody
 enpass-bin
 google-chrome
 gotop-bin
+libldac
+pulseaudio-modules-bt-git
 rbenv
 ruby-build
 s-tui
