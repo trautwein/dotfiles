@@ -122,6 +122,9 @@ nnoremap <esc> :noh<return>
 " Use the clipboard
 set clipboard=unnamedplus
 
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
+
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
