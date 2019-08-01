@@ -17,9 +17,11 @@ SRCEXT='.src.tar.xz'
 sudo pacman -S ttf-dejavu ttf-liberation noto-fonts
 
 ### Enable font presets
+```zsh
 sudo ln -s /etc/fonts/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d
 sudo ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d
 sudo ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
+```
 
 ### Font configuration
 > /etc/fonts/local.conf
