@@ -1,10 +1,8 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'natebosch/vim-lsc'
-Plug 'ajh17/VimCompletesMe'
-
 Plug 'airblade/vim-gitgutter'
 Plug 'airblade/vim-localorie'
+Plug 'ajh17/VimCompletesMe'
 Plug 'brooth/far.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
@@ -13,6 +11,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'machakann/vim-highlightedyank'
 Plug 'mhartington/oceanic-next'
 Plug 'mileszs/ack.vim'
+Plug 'natebosch/vim-lsc'
 Plug 'slim-template/vim-slim'
 Plug 'szw/vim-tags'
 Plug 'testdouble/standard'
