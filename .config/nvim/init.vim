@@ -9,11 +9,13 @@ if filereadable(expand("~/.config/nvim/plugins.vim"))
   endif
 endif
 
-" Options
+" Various options
 let mapleader=","         " Map the Leader key
 set inccommand=nosplit    " Preview the effects of substitute live
 set incsearch             " Enable incremental searching
 set mouse=a               " Enable cursor and split selection using the mouse
+set ignorecase
+set smartcase
 
 " Automatically switch between hybrid and absolute-only line numbers
 set number relativenumber
@@ -74,30 +76,49 @@ let g:lightline = {
 nnoremap <Leader>e :Explore<CR>
 let g:netrw_localrmdir='rm -r'
 
-" ctrlp with ag
+" Use ag over grep
 if executable('ag')
-  " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
 endif
 
 " ALE
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'ruby': ['rubocop'],
+let g:ale_linters = {
+\   'ruby': ['standardrb', 'rubocop'],
 \   'javascript': ['prettier', 'eslint']
 \}
 
-let g:ale_fix_on_save = 1
-let g:ale_fix_on_save_ignore = ['rubocop', 'prettier', 'eslint']
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'ruby': ['standardrb']
+\}
 
-" autocompletion
-set omnifunc=syntaxcomplete#Complete
+let g:ale_fix_on_save = 1
+
+" LSC
+"
+" Install Solargraph via 'gem install solargraph' and run 'solargraph bundle'
+" when installing/updating ruby gems
+let g:lsc_server_commands = {
+ \  'ruby': {
+ \    'command': 'solargraph stdio',
+ \    'log_level': -1,
+ \    'suppress_stderr': v:true,
+ \  }
+ \}
+let g:lsc_auto_map = {
+ \  'GoToDefinition': 'gd',
+ \  'FindReferences': 'gr',
+ \  'Rename': 'gR',
+ \  'ShowHover': 'K',
+ \  'FindCodeActions': 'ga',
+ \  'Completion': 'omnifunc',
+ \}
+let g:lsc_enable_autocomplete  = v:true
+let g:lsc_enable_diagnostics   = v:false
+let g:lsc_reference_highlights = v:false
+let g:lsc_trace_level          = 'off'
+
+set completeopt=menu,menuone,noinsert,noselect
 
 " fugitive
 set diffopt+=vertical
@@ -119,11 +140,26 @@ nmap ga <Plug>(EasyAlign)
 " Clear the search on ESC
 nnoremap <esc> :noh<return>
 
-" Use the clipboard
-set clipboard=unnamedplus
+" Enable system clipboard integration
+set clipboard+=unnamedplus
+" Workaround for neovim wl-clipboard and netrw interaction hang
+" (see: https://github.com/neovim/neovim/issues/6695 and
+" https://github.com/neovim/neovim/issues/9806)
+let g:clipboard = {
+ \   'name': 'myClipboard',
+ \   'copy': {
+ \      '+': 'wl-copy',
+ \      '*': 'wl-copy',
+ \    },
+ \   'paste': {
+ \      '+': 'wl-paste -o',
+ \      '*': 'wl-paste -o',
+ \   },
+ \   'cache_enabled': 0,
+ \ }
 
-" Use deoplete.
-let g:deoplete#enable_at_startup = 1
+" fzf
+map <Leader>f :FZF<CR>
 
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>

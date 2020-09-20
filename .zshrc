@@ -33,6 +33,9 @@ antibody bundle < ~/.zsh_plugins
 # Aliases
 source ~/.zsh_aliases
 
+# Environment Variables
+source ~/.zsh_env
+
 # Prompt
 autoload -Uz promptinit
 promptinit
@@ -41,10 +44,9 @@ promptinit
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 # autojump
 source /etc/profile.d/autojump.sh
-
-# sway
-if [ "$(tty)" = "/dev/tty1" ]; then
-  exec sway
-fi
